@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+#dashboard {
+    padding: 10px 20px;
+
+}
+
+.business-data-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.icon-container {
+    border-radius: 10px;
+    background-color: aqua;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+}
+
+.business-data-container>* {
+    background-color: #fff;
+    flex: 1;
+    padding: 5px 8px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 15px;
+    padding: 25px 20px;
+
+}
+
+.total-sales:nth-child(1) .icon-container {
+    background-color: rgba(255, 166, 0, 0.148);
+}
+
+.total-sales:nth-child(1) .icon-container i {
+    color: orange;
+}
+
+.total-order .icon-container {
+    background-color: rgba(0, 255, 255, 0.158);
+    color: rgb(26, 163, 205);
+}
+
+.total-products .icon-container {
+    background-color: rgba(0, 255, 30, 0.251);
+    color: green;
+}
+
+.total-customers .icon-container {
+    background-color: rgba(255, 0, 0, 0.195);
+    color: red;
+}
+
+
+.data-value {
+    display: block;
+    font-size: 2rem;
+}
+
+.graph-container {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.graph-container>* {
+    background-color: #fff;
+    flex: 1;
+    border-radius: 15px;
+    padding: 15px;
+    height: 300px;
+
+}

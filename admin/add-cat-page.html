@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color: green;
+            --secondary-color: white;
+            --primary-txt-color: black;
+            --secondary-txt-color: white;
+            --normal-txt-color: rgb(84, 84, 84);
+            --prod-price-color: darkgreen;
+            --btn-hover-color: rgb(0, 96, 0);
+            --content-width: 1250px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #addcategory {
+            background-color: #f4f4f4da;
+            height: 100dvh;
+            padding: 20px 25px;
+        }
+
+
+
+        .add-category-form {
+            margin-top: 15px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap: 15vw;
+            row-gap: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+        }
+
+        .add-category-form label {
+            font-size: 1.1rem;
+        }
+
+        .add-category-form>input {
+            padding: 4px 10px;
+            border-radius: 7px;
+            border: 1px solid gray;
+            font-size: 1.2rem;
+        }
+
+        .img-submitter {
+            border-radius: 7px;
+
+            width: auto;
+            height: 200px;
+            border: dashed 1px blue;
+        }
+
+        .add-category-form .submit-btn {
+
+            grid-column-start: 2;
+            text-align: right;
+        }
+
+        .submit-btn input[type='submit'] {
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            width: fit-content;
+            padding: 0.3em 1.8em;
+            border: none;
+            font-size: 1.4rem;
+            border-radius: 8px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <main id="addcategory">
+        <section class="add-category-container">
+            <h1 class="page-heading">Add Category</h1>
+            <form action="" class="add-category-form">
+                <label for="">Category Name</label>
+                <input type="text">
+                <label for="">Upload Image</label>
+                <div class="img-submitter">
+                    <input type="image" src="" alt="">
+                </div>
+                <div class="submit-btn"> <input type="submit" value="Add ">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

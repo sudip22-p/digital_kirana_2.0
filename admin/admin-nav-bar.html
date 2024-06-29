@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #adminNavBar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 30px;
+        }
+
+        .nav-contents {
+            display: flex;
+            align-items: baseline;
+            gap: 25px;
+        }
+
+        .admin-notification {
+            font-size: 1.8rem;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .notification-count {
+            position: absolute;
+            font-size: 0.8rem;
+            color: white;
+            background-color: red;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 400px;
+            height: 20px;
+            width: 20px;
+            top: -10px;
+            right: -8px;
+            padding-top: 4px;
+        }
+
+        .admin-profile {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .admin-profile i {
+            font-size: 3rem;
+        }
+
+        .admin-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .admin-role {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="adminNavBar">
+        <ul class="nav-contents">
+            <li><i class='bx bx-bell admin-notification'><span class="notification-count">12</span></i></li>
+            <li class="admin-profile">
+                <i class='bx bxs-user-circle'></i>
+                <p class="admin-info">
+                    <span class="admin-name">
+                        John Doe
+                    </span>
+                    <span class="admin-role">
+                        Admin
+                    </span>
+                </p>
+            </li>
+
+
+        </ul>
+    </nav>
+
+
+
+</body>
+
+</html>

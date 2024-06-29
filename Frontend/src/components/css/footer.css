@@ -1,0 +1,58 @@
+:root {
+    --primary-color: green;
+    --secondary-color: white;
+    --primary-txt-color: black;
+    --secondary-txt-color: white;
+    --normal-txt-color: rgb(84, 84, 84);
+}
+
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li {
+    list-style: none;
+}
+
+footer {
+    position: absolute;
+    height: 170px;
+    bottom: 0px;
+    background-color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 140px;
+    margin-top: 10px;
+}
+
+.footer-social-links {
+    font-size: 2.2rem;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-vr-border {
+    display: inline;
+    margin: 0px 10px;
+    border-left: 1px solid rgb(87, 87, 87);
+}
+
+.footer-contact-info {
+    display: flex;
+    gap: 20px;
+}
+
+#copyright {
+    font-size: .8rem;
+    margin-top: 10px;
+}

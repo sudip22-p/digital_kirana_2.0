@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(236, 235, 235) !important;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+
+        #dashboard {
+            padding: 10px 20px;
+
+        }
+
+        .business-data-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .icon-container {
+            border-radius: 10px;
+            background-color: aqua;
+            height: 80px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.3rem;
+        }
+
+        .business-data-container>* {
+            background-color: #fff;
+            flex: 1;
+            padding: 5px 8px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            border-radius: 15px;
+            padding: 25px 20px;
+
+        }
+
+        .total-sales:nth-child(1) .icon-container {
+            background-color: rgba(255, 166, 0, 0.148);
+        }
+
+        .total-sales:nth-child(1) .icon-container i {
+            color: orange;
+        }
+
+        .total-order .icon-container {
+            background-color: rgba(0, 255, 255, 0.158);
+            color: rgb(26, 163, 205);
+        }
+
+        .total-products .icon-container {
+            background-color: rgba(0, 255, 30, 0.251);
+            color: green;
+        }
+
+        .total-customers .icon-container {
+            background-color: rgba(255, 0, 0, 0.195);
+            color: red;
+        }
+
+
+        .data-value {
+            display: block;
+            font-size: 2rem;
+        }
+
+        .graph-container {
+            display: flex;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .graph-container>* {
+            background-color: #fff;
+            flex: 1;
+            border-radius: 15px;
+            padding: 15px;
+            height: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main id="dashboard">
+        <h1>Dashboard</h1>
+        <section class="business-data-container">
+            <div class="total-sales">
+                <div class="icon-container">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <div class="business-data">
+                    <b class="data-value">6000</b>
+                    <span class="data-title">Total Sales</span>
+                </div>
+            </div>
+            <div class="total-order">
+                <div class="icon-container">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="business-data">
+                    <b class="data-value">60</b>
+                    <span class="data-title">Total Orders</span>
+                </div>
+
+            </div>
+            <div class="total-products">
+                <div class="icon-container">
+                    <i class="fa-brands fa-product-hunt"></i>
+                </div>
+                <div class="business-data">
+                    <b class="data-value">40</b>
+                    <span class="data-title">Total Products</span>
+                </div>
+
+            </div>
+            <div class="total-customers">
+                <div class="icon-container">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="business-data">
+                    <b class="data-value">20</b>
+                    <span class="data-title">Total Customers</span>
+                </div>
+            </div>
+        </section>
+        <section class="graph-container">
+            <section class="sales-graph">
+                <h2>Sales Graph</h2>
+            </section>
+            <section class="top-selling-piechart">
+                <h2>Top Selling</h2>
+            </section>
+        </section>
+
+
+
+    </main>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4da;
+
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #productListingPage {
+            background-color: #f4f4f4da;
+            padding: 20px;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .searchbar-container {
+            position: relative;
+        }
+
+        .searchbar-container i {
+            position: absolute;
+            font-size: 1.3rem;
+            top: 10px;
+            right: 10px;
+        }
+
+        .admin-product-search {
+            display: flex;
+            background-color: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            justify-content: space-between;
+        }
+
+        .admin-product-search-container {
+            display: flex;
+        }
+
+        .product-searchbar {
+            border-radius: 700px;
+            border: 2px solid rgb(163, 163, 163);
+            padding: 6px 15px;
+            font-size: 1rem;
+            width: 300px;
+        }
+
+        .product-category-search {
+            margin-left: 20px;
+            cursor: pointer;
+            border-radius: 700px;
+            border: 2px solid rgb(163, 163, 163);
+            padding: 6px 15px;
+            padding-right: 20px;
+            font-size: 1rem;
+        }
+
+        .add-product-btn {
+            background-color: green;
+            cursor: pointer;
+            color: #fff;
+            font-size: 1rem;
+            padding: 6px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 200px;
+            border: none;
+        }
+
+        .admin-product-list {
+            background-color: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+        }
+
+        .admin-product-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding-top: 20px;
+        }
+
+        th {
+            padding-bottom: 10px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        th {
+            border-bottom: 1px solid rgba(128, 128, 128, 0.455);
+            font-size: 1.1rem;
+        }
+
+        .prod-list-actions,
+        .prod-list-view,
+        .prod-list-status,
+        .prod-data-actions,
+        .prod-data-status,
+        .prod-data-view,
+        .prod-data-published,
+        .prod-data-stock,
+        .prod-list-stock,
+        .prod-data-price,
+        .prod-list-price,
+        .prod-data-category,
+        .prod-list-category {
+            width: 120px;
+            text-align: center;
+        }
+
+        .prod-data-img img {
+            height: 50px;
+            width: 50px;
+            object-fit: fill;
+        }
+
+        .prod-data-actions {
+            justify-content: space-between;
+            font-size: 1.5rem;
+            height: 100%;
+        }
+
+        .prod-data-view {
+            padding-left: 30px;
+        }
+
+        .view-prod-btn {
+            cursor: pointer;
+
+            font-size: 1.5rem;
+
+        }
+
+        .delete-prod-btn {
+            color: red;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .edit-prod-btn {
+            color: blue;
+            cursor: pointer;
+        }
+
+        .prod-status {
+            padding: 0.3em 0.6em;
+            color: #fff;
+            border-radius: 60px;
+        }
+
+        .selling {
+            background-color: rgb(0, 177, 0);
+        }
+
+        .sold-out {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="productListingPage">
+        <h1 class="page-heading">Products</h1>
+        <section class="admin-product-search">
+            <div class="admin-product-search-container">
+                <div class="searchbar-container">
+                    <input type="text" placeholder="Search Product" class="product-searchbar">
+                    <i class='bx bx-search'></i>
+                </div>
+                <select name="" id="" class="product-category-search">ss
+                    <option value="Categories">Categories</option>
+                    <option value="Groccery">Groccery</option>
+                </select>
+            </div>
+            <button class="add-product-btn">Add New Product <i class='bx bx-plus-circle'></i></button>
+        </section>
+        <section class="admin-product-list">
+            <table class="admin-product-table">
+                <tr class="table-heading">
+                    <th class="product-id">S.N</th>
+                    <th class="prod-list-img">Image</th>
+                    <th class="prod-list-name">Product Name</th>
+                    <th class="prod-list-category">Category</th>
+                    <th class="prod-list-price">Price</th>
+                    <th class="prod-list-stock">Stock</th>
+                    <th class="prod-list-status">Status</th>
+                    <th class="prod-list-view">View</th>
+                    <th class="prod-list-actions">Actions</th>
+                </tr>
+                <tr class="product-data">
+                    <td class="prod-data-sn">1</td>
+                    <td class="prod-data-img"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0tDxKr6OVOME5w1NODBkotoRW4ih_UsRzuJxlfx_Og&s"
+                            alt=""></td>
+                    <td class="prod-data-name">1</td>
+                    <td class="prod-data-category">1</td>
+                    <td class="prod-data-price">40</td>
+                    <td class="prod-data-stock">1</td>
+                    <td class="prod-data-status"><span class="prod-status selling">Selling</span></td>
+                    <td class="prod-data-view"><i class='bx bx-search-alt-2 view-prod-btn'></i></td>
+                    <td class="prod-data-actions"><i class='bx bx-edit-alt edit-prod-btn'></i><i
+                            class='bx bx-trash-alt delete-prod-btn'></i></td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+
+
+
+</body>
+
+</html>

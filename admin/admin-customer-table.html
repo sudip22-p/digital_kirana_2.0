@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #f4f4f4da;
+
+        }
+
+        #adminCustomerPage {
+            padding: 15px 20px;
+        }
+
+        .searchbar-container {
+            position: relative;
+        }
+
+        .searchbar-container i {
+            position: absolute;
+            font-size: 1.3rem;
+            top: 10px;
+            right: 10px;
+        }
+
+        .admin-cus-search {
+            display: flex;
+            background-color: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            justify-content: space-between;
+        }
+
+        .admin-cus-search-container {
+            display: flex;
+        }
+
+        .cus-searchbar {
+            border-radius: 700px;
+            border: 2px solid rgb(163, 163, 163);
+            padding: 6px 15px;
+            font-size: 1rem;
+            width: 300px;
+        }
+
+
+
+
+        .admin-cus-list {
+            background-color: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .admin-cus-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding-top: 20px;
+        }
+
+        th {
+            padding-bottom: 10px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        th {
+            border-bottom: 1px solid rgba(128, 128, 128, 0.455);
+            font-size: 1.1rem;
+        }
+
+        .cus-data-actions {
+            color: red;
+            font-size: 1.3rem;
+            cursor: pointer;
+
+        }
+
+        .cus-data-view {
+            cursor: pointer;
+            font-size: 1.3rem;
+
+        }
+
+        .cus-data-actions,
+        .cus-data-view,
+        .cus-list-actions,
+        .cus-list-view {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="adminCustomerPage">
+        <h1>Customers</h1>
+        <section class="admin-cus-search">
+            <div class="admin-cus-search-container">
+                <div class="searchbar-container">
+                    <input type="text" placeholder="Search customer" class="cus-searchbar">
+                    <i class='bx bx-search'></i>
+                </div>
+            </div>
+        </section>
+        <section class="admin-cus-list">
+            <table class="admin-cus-table">
+                <tr class="table-heading">
+                    <th class="cus-id">S.N</th>
+                    <th class="cus-list-joindate">Joindate</th>
+                    <th class="cus-list-name">cus Name</th>
+                    <th class="cus-list-email">Email</th>
+                    <th class="cus-list-number">Number</th>
+
+                    <th class="cus-list-view">View</th>
+                    <th class="cus-list-actions">Actions</th>
+                </tr>
+                <tr class="cus-data">
+                    <td class="cus-data-id">1</td>
+                    <td class="cus-data-joindate">1</td>
+                    <td class="cus-data-name">1</td>
+                    <td class="cus-data-email">40</td>
+                    <td class="cus-data-number">1</td>
+                    <td class="cus-data-view"><i class='bx bx-search-alt-2 view-cus-btn'></i></td>
+                    <td class="cus-data-actions"><i class='bx bx-trash-alt delete-cus-btn'></i></td>
+                </tr>
+            </table>
+        </section>
+
+
+    </main>
+
+
+
+
+</body>
+
+</html>

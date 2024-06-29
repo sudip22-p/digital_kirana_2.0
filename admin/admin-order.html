@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(214, 214, 214) !important;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+
+        #orderPage {
+            padding: 10px 20px;
+
+        }
+
+        .searchbar-container {
+            position: relative;
+        }
+
+        .searchbar-container i {
+            position: absolute;
+            font-size: 1.3rem;
+            top: 10px;
+            right: 10px;
+        }
+
+        .admin-order-search {
+            display: flex;
+            background-color: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            justify-content: space-between;
+        }
+
+        .admin-order-search-container {
+            display: flex;
+        }
+
+        .order-searchbar {
+            border-radius: 700px;
+            border: 2px solid rgb(163, 163, 163);
+            padding: 6px 15px;
+            font-size: 1rem;
+            width: 300px;
+        }
+
+
+
+
+
+
+        #orderListTable {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 10px 15px;
+
+        }
+
+
+
+        td {
+            padding-top: 20px;
+        }
+
+        th {
+            padding-bottom: 10px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        th {
+            border-bottom: 1px solid rgba(128, 128, 128, 0.455);
+            font-size: 1.1rem;
+        }
+
+        .order-status-value {
+            padding: 0.2em 0.7em;
+            border-radius: 40px;
+        }
+
+        .pending {
+            color: rgb(100, 100, 0);
+            background-color: rgba(255, 255, 0, 0.177);
+        }
+
+        .processing {
+            color: blue;
+            background-color: rgba(0, 0, 255, 0.088);
+        }
+
+        .delivered {
+            color: rgb(0, 128, 0);
+            background-color: rgba(0, 128, 0, 0.174);
+        }
+
+        .cancelled {
+            color: rgb(182, 0, 0);
+            background-color: rgba(255, 0, 0, 0.167);
+        }
+
+        .order-action select {
+            cursor: pointer;
+            padding: 0.2em 0.3em;
+        }
+
+        .order-invoice {
+            text-align: center;
+        }
+
+        td.order-invoice>* {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="orderPage">
+        <h1>Orders</h1>
+        <section class="admin-order-search">
+            <div class="admin-order-search-container">
+                <div class="searchbar-container">
+                    <input type="text" placeholder="Search Customers" class="order-searchbar">
+                    <i class='bx bx-search'></i>
+                </div>
+            </div>
+        </section>
+        <section class="order-list">
+            <table id="orderListTable">
+                <tr class="order-table-heading">
+                    <th class="order-id">Order id</th>
+                    <th class="order-date">Date</th>
+                    <th class="order-cus-name">Customer Name</th>
+                    <th class="order-amount">Amount</th>
+                    <th class="order-status">Status</th>
+                    <th class="order-action">Action</th>
+                    <th class="order-invoice">Invoice</th>
+                </tr>
+                <tr class="order1">
+                    <td class="order-id">1</td>
+                    <td class="order-date">Jan 1 ,2020</td>
+                    <td class="order-cus-name">Beasty</td>
+                    <td class="order-amount">Rs 500</td>
+                    <td class="order-status"><span class="order-status-value pending">Pending</span></td>
+                    <td class="order-action"><select name="" id="">
+                            <option value="pending">Pending</option>
+                            <option value="Processing">Processing</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="canceled">Canceled</option>
+                        </select></td>
+                    <td class="order-invoice"><i class="fa-solid fa-magnifying-glass-plus"></i></td>
+                </tr>
+
+
+            </table>
+        </section>
+
+    </main>
+
+
+
+
+</body>
+
+</html>

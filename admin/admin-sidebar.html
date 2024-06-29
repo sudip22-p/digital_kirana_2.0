@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #adminSidebar {
+            height: 100dvh;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            background-color: #FFF;
+            width: 280px;
+            padding: 15px 30px;
+        }
+
+        .sidebar-min-btn {
+            cursor: pointer;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            font-size: 2rem;
+
+        }
+
+        #adminLogo {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        .side-items-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 60px 0px;
+            padding-bottom: 150px;
+        }
+
+        .side-item a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <aside id="adminSidebar">
+        <div class="img-container">
+            <figure><img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/033/662/051/small_2x/cartoon-lofi-young-manga-style-girl-while-listening-to-music-in-the-rain-ai-generative-photo.jpg"
+                    alt="logo" id="adminLogo"></figure>
+            <i class='bx bx-menu-alt-left sidebar-min-btn'></i>
+        </div>
+        <ul class="side-items-list">
+            <li class="side-item"><a href=""><i class='bx bxs-dashboard'></i><span>Dashboard</span></a></li>
+            <li class="side-item"><a href=""><i class='bx bxl-product-hunt'></i><span>Product</span></a></li>
+            <li class="side-item"><a href=""><i class='bx bx-border-all'></i><span>Categories</span></a></li>
+            <li class="side-item"><a href=""><i class='bx bxs-dashboard'></i><span>Order</span></a></li>
+            <li class="side-item"><a href=""><i class='bx bxs-dashboard'></i><span>Banner</span></a></li>
+        </ul>
+    </aside>
+
+
+</body>
+
+</html>

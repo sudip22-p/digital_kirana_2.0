@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #f4f4f4da;
+
+        }
+
+        #adminDetailProduct {
+            padding: 15px 20px;
+        }
+
+        .admin-product-detaiils {
+            display: flex;
+            gap: 60px;
+        }
+
+        .left-image-container {
+            flex: 1.5;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .admin-prod-img-container {
+            height: 300px;
+            width: 300px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 2px;
+            box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.14);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .admin-prod-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .right-detail-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .admin-prod-name {
+            font-size: 1.6rem;
+        }
+
+        .admin-prod-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: rgb(55, 55, 55);
+        }
+
+        .admin-prod-qty,
+        .admin-prod-cat {
+            font-weight: 500;
+        }
+
+        .admin-prod-edit-btn {
+            cursor: pointer;
+            background-color: green;
+            border: none;
+            font-size: 1.3rem;
+            padding: .4em 1.8em;
+            border-radius: 12px;
+            width: fit-content;
+            color: #fff;
+        }
+
+        .admin-prod-edit-btn:hover {
+            background-color: rgb(0, 97, 0);
+
+        }
+    </style>
+</head>
+
+<body>
+    <main id="adminDetailProduct">
+        <h1>Product</h1>
+        <section class="admin-product-detaiils">
+            <section class="left-image-container">
+                <figure class="admin-prod-img-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0tDxKr6OVOME5w1NODBkotoRW4ih_UsRzuJxlfx_Og&s"
+                        alt="">
+                </figure>
+                <figure class="admin-prod-img-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0tDxKr6OVOME5w1NODBkotoRW4ih_UsRzuJxlfx_Og&s"
+                        alt="">
+                </figure>
+                <figure class="admin-prod-img-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0tDxKr6OVOME5w1NODBkotoRW4ih_UsRzuJxlfx_Og&s"
+                        alt="">
+                </figure>
+                <figure class="admin-prod-img-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0tDxKr6OVOME5w1NODBkotoRW4ih_UsRzuJxlfx_Og&s"
+                        alt="">
+                </figure>
+
+
+            </section>
+            <section class="right-detail-container">
+                <h2 class="admin-prod-name">Bread</h2>
+                <span class="admin-prod-price">Price : Rs 475</span>
+                <span class="admin-prod-qty">Quantity : <span class="admin-prod-qty-value">20</span></span>
+                <span class="admin-prod-cat">Category : <span class="admin-prod-cat-value">20</span></span>
+                <p class="admin-prod-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae est aliquam
+                    delectus. Soluta magnam vero labore amet sapiente, commodi magni. Hic ipsa dignissimos aut esse
+                    voluptatibus illum voluptatum odio dolorum?</p>
+                <button class="admin-prod-edit-btn"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+            </section>
+        </section>
+
+    </main>
+
+
+
+
+</body>
+
+</html>

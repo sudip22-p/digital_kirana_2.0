@@ -1,0 +1,98 @@
+:root {
+    --primary-color: green;
+    --secondary-color: white;
+    --primary-txt-color: black;
+    --secondary-txt-color: white;
+    --normal-txt-color: rgb(84, 84, 84);
+    --prod-price-color: darkgreen;
+    --btn-hover-color: rgb(0, 96, 0);
+    --content-width: 1250px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#addcategory {
+    background-color: #f4f4f4da;
+    padding: 20px 25px;
+    height: calc(100dvh - 70px );
+    width: 100%;
+}
+
+
+
+.add-category-form {
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 15vw;
+    row-gap: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.add-category-form label {
+    font-size: 1.1rem;
+}
+
+.add-category-form>input {
+    padding: 4px 10px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    font-size: 1.2rem;
+}
+
+.img-submitter {
+    cursor: pointer;
+    border-radius: 7px;
+    width: auto;
+    height: 200px;
+    border: dashed 1px blue;
+    position: relative;
+}
+.upload-image{
+    position: absolute;
+    top:50%;
+    left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.add-category-form .submit-btn {
+
+    grid-column-start: 2;
+    text-align: right;
+}
+
+.submit-btn input[type='submit'] {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: fit-content;
+    padding: 0.3em 1.8em;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 8px;
+
+
+}

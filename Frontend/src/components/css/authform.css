@@ -1,0 +1,253 @@
+:root {
+    --primary-color: green;
+    --secondary-color: white;
+    --primary-txt-color: black;
+    --secondary-txt-color: white;
+    --normal-txt-color: rgb(84, 84, 84);
+    --prod-price-color: darkgreen;
+    --btn-hover-color: rgb(0, 96, 0);
+    --fcontent-width: 400px;
+}
+
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+
+@media (width <=720px) {
+
+
+    .nav-cat-items-container {
+        display: none !important;
+    }
+
+    .nav-items {
+        display: none !important;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    .search-bar {
+        width: 100% !important;
+        font-size: 15px;
+    }
+
+    header {
+        padding: 0px 10px;
+    }
+
+    .main-nav {
+        padding: 5px 0px !important;
+        gap: 40px;
+    }
+
+    .bottom-nav {
+        display: block !important;
+    }
+
+    .menu-slider {
+        display: block !important;
+    }
+
+    .categories-list {
+        display: none;
+    }
+
+}
+
+@media (width <=450px) {
+    :root {
+        --fcontent-width: 100%;
+    }
+
+
+    .product-card-container {
+        grid-template-columns: repeat(5, 45%);
+        overflow-x: scroll !important;
+    }
+
+    .nav-cat-items-container {
+        display: none !important;
+    }
+
+    .nav-items {
+        display: none !important;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    .search-bar {
+        width: 100% !important;
+        font-size: 15px;
+    }
+
+    header {
+        padding: 0px 10px;
+    }
+
+    .main-nav {
+        padding: 5px 0px !important;
+        gap: 40px;
+    }
+
+    .bottom-nav {
+        display: block !important;
+        z-index: 1;
+    }
+
+    .menu-slider {
+        display: block !important;
+    }
+
+    .categories-list {
+        display: none;
+    }
+
+
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+#signupContainer {
+    background-color: rgb(240, 240, 240);
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signupContainer .container {
+    width: var(--fcontent-width);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #fff;
+    padding: 14px 30px;
+    border-radius: 15px;
+    gap: 15px;
+
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container h1 {
+    text-align: center;
+}
+.relative{
+    width: 100%;
+}
+
+.relative button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 0.2em;
+    border-radius: 8px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgb(144, 144, 144);
+    font-size: 1.1rem;
+}
+
+.already-acc {
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+
+.already-acc span {
+    cursor: pointer;
+    color: blue;
+}
+
+.form-divider::before,
+.form-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 10%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.544);
+}
+
+
+.extra-option {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.or-container {
+
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: rgb(54, 54, 54);
+}
+
+.or-container::before,
+.or-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 28%;
+    height: 2px;
+    background-color: rgba(191, 191, 191, 0.544);
+}
+
+.or-container::before {
+    left: 0;
+}
+
+.or-container::after {
+    right: 0;
+}
+
+.extra-links {
+    display: flex;
+    gap: 20px;
+}   
+.forgot-password{
+    text-align: right;
+}
+.forgot-password > *{
+    cursor: pointer;
+    color: blue;
+}
