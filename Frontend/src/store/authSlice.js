@@ -64,7 +64,7 @@ export const register = data =>{
                 const { username, email, _id, phoneNumber } = data;
                 localStorage.setItem('user', JSON.stringify({ username, email, _id, phoneNumber }));
                 Cookies.set('userToken', response.data.userToken, { expires: 7 });
-                location.href = 'http://localhost:5173/';
+                location.href = 'https://digital-kirana-gules.vercel.app/';
             } else {
                 console.log("Unexpected response status or missing userToken", response);
                 dispatch(setStatus(STATUS.ERROR));
@@ -93,7 +93,7 @@ export const handleSuccessLogin = (data) => {
                 const {email,_id} = response.data.user;
                 localStorage.setItem('user', JSON.stringify({email,_id}));
                 Cookies.set("googleToken", response.data.googleToken)
-                location.href = 'http://localhost:5173/'
+                location.href = 'https://digital-kirana-gules.vercel.app/'
             } else{
                 dispatch(setStatus(STATUS.ERROR))
             }
