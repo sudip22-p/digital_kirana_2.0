@@ -24,7 +24,7 @@ const Form = ({ type, onSubmit }) => {
     onSubmit(data)
   }
   const google = () => {
-    window.open("http://localhost:3000/auth/login/google", "_self")
+    window.open("https://digitalkirana.vercel.app/auth/login/google", "_self")
   }
   const facebook = () =>{
     

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const AdminNavbar = () => {
     const [admin,setAdmin] = useState()
     const handleAPI = async () =>{
-        const response = await axios.get('http://localhost:3000/admin/dashboard/index')
+        const response = await axios.get('https://digitalkirana.vercel.app/admin/dashboard/index')
     }
     useEffect(()=>{
         handleAPI()

@@ -8,8 +8,8 @@ const AdminProduct = () => {
     const [products,setProducts] = useState([])
     const [categories,setCategories] = useState([])
     const handleAPI = async () =>{
-        const product = await axios.get('http://localhost:3000/admin/dashboard/allProducts')
-        const category = await axios.get('http://localhost:3000/admin/dashboard/allCategories')
+        const product = await axios.get('https://digitalkirana.vercel.app/admin/dashboard/allProducts')
+        const category = await axios.get('https://digitalkirana.vercel.app/admin/dashboard/allCategories')
         setProducts(product.data.products)
         setCategories(category.data.allCategories)
     }

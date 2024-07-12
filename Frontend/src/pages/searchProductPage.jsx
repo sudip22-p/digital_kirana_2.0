@@ -12,7 +12,7 @@ const SearchProductPage = () => {
   useEffect(() => {
     const handleAPI = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/search/${query}`);
+        const response = await axios.get(`https://digitalkirana.vercel.app/api/search/${query}`);
         setProducts(response.data); // Assuming response.data is the list of products
         console.log('Query:', query);
         console.log('Products:', response.data);

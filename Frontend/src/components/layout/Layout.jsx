@@ -13,7 +13,7 @@ const Layout = ({children}) => {
   const [categories, setCategory] = useState([])
   useEffect(() => {
     const handleAPI = async () => {
-      const response = await axios.get('http://localhost:3000/api/categoryNames')
+      const response = await axios.get('https://digitalkirana.vercel.app/api/categoryNames')
       setCategory(response.data.categories)
     }
     handleAPI()

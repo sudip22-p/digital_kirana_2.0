@@ -19,7 +19,7 @@ const ProductSinglePage = () => {
     const [similarProducts, setSimilarProducts] = useState([])
     useEffect(() => {
         const handleAPI = async () => {
-            const singleProduct = await axios.get(`http://localhost:3000/api/singlePage/${id}`)
+            const singleProduct = await axios.get(`https://digitalkirana.vercel.app/api/singlePage/${id}`)
             setProduct(singleProduct.data.productData)
             setSimilarProducts(singleProduct.data.similarProducts)  
         }

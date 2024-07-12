@@ -20,7 +20,7 @@ const AdminAddProduct = () => {
         })
       }
     const handePostApi = async () =>{
-        const response = await axios.post('http://localhost:3000/admin/dashboard/add-product')
+        const response = await axios.post('https://digitalkirana.vercel.app/admin/dashboard/add-product')
     }
   return (
     <>

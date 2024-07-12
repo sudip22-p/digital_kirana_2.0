@@ -6,7 +6,7 @@ import axios from 'axios'
 const AdminOrderPage = () => {
     const [allOrders,setOrders] = useState([])
     const handleAPI = async () =>{
-        const response = await axios.get('http://localhost:3000/admin/dashboard/allOrders')
+        const response = await axios.get('https://digitalkirana.vercel.app/admin/dashboard/allOrders')
         console.log(response.data.allOrders)
         setOrders(response.data.allOrders)
     }
