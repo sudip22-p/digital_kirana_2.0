@@ -82,6 +82,10 @@ const uploadFields = [
 
 app.use(upload.fields(uploadFields));
 
+// Root Route for Server Status
+app.get('/', (req, res) => {
+    res.send('Server is running');
+  });
 const authRoutes = require('./routes/authRoute');
 const adminRoutes = require("./routes/adminRoutes")
 const pageRoutes = require("./routes/pageRoutes");
