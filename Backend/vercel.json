@@ -6,11 +6,10 @@
         "use": "@vercel/node"
       }
     ],
-    "redirects": [
+    "routes": [
       {
-        "source": "/(.*)",
-        "destination": "https://digital-kirana-gules.vercel.app/$1",
-        "permanent": true
+        "src": "/(.*)",
+        "dest": "/app.js"
       }
     ]
   }
