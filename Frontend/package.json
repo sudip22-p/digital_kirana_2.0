@@ -12,6 +12,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@reduxjs/toolkit": "^2.2.5",
+    "@types/leaflet": "^1.9.12",
     "axios": "^1.6.8",
     "boxicons": "^2.1.4",
     "gsap": "^3.12.5",

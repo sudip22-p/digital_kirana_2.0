@@ -2,15 +2,6 @@ import { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Manually set path to Leaflet's default icons
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png').default,
-    iconUrl: require('leaflet/dist/images/marker-icon.png').default,
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png').default,
-});
-
 function Map() {
     useEffect(() => {
         const map = L.map('map').setView([28.2096, 83.9856], 13);
