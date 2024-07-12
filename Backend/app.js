@@ -39,14 +39,18 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 const fileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
         if (file.fieldname === 'imageUrl') {
-            cb(null, "../Frontend/Assets/Images/categories/trying");
+            cb(null, "./public/Assets/Images/categories/trying");
         } else if (file.fieldname === 'promoImg') {
-            cb(null, "../Frontend/Assets/Images/promotion");
+            cb(null, "./public/Assets/Images/promotion");
         } else {
-            cb(null, "../Frontend/Assets/Images/Products");
+            cb(null, "./public/Assets/Images/Products");
         }
     },
     filename: (req, file, cb) => {
