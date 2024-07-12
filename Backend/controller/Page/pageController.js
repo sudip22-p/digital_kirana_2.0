@@ -140,7 +140,7 @@ exports.createOrder = async (req, res) => {
     if (order.payment_method === "esewa") {
       const formData = {
         amount: order.amount,
-        failure_url: "http://localhost:5173",
+        failure_url: "https://digital-kirana-gules.vercel.app/checkout",
         product_delivery_charge: "0",
         product_service_charge: "0",
         product_code: "EPAYTEST",
@@ -171,7 +171,7 @@ exports.updateOrderAfterPayment = async (req, res, next) => {
     order.transaction_code = req.transaction_code;
 
     await orderService.save(order);
-    return res.redirect("http://localhost:5173");
+    return res.redirect("https://digital-kirana-gules.vercel.app");
   } catch (err) {
     return res.status(400).json({ error: err?.message || "No Orders found" });
   }
