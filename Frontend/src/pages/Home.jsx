@@ -30,10 +30,10 @@ const Home = () => {
         <main>
           <section id="promotionalImageContainer">
             <div className="main-img-banner">
-              <img src={`../../Assets/Images/promotion/deliver%20banner.png`} alt="" />
+              <img src={`https://digitalkirana-server.vercel.app/Assets/Images/promotion/deliver%20banner.png`} alt="" />
             </div>
             <div className="secondary-img-banner">
-              <img src={`../../Assets/Images/promotion/advertisement-banner.png`} alt="" />
+              <img src={`https://digitalkirana-server.vercel.app/Assets/Images/promotion/advertisement-banner.png`} alt="" />
             </div>
           </section>
           <Products data={product}/>

@@ -12,7 +12,7 @@ const Categories = ({data}) => {
             <Link to={`/productCategory/${category._id}`} key={index} >
                 <div className="category-card">
                     <figure className="category-img-container">
-                        <img src={`../../../../Assets/Images/categories/${category.imageUrl}`} alt="" />
+                        <img src={`../../https://digitalkirana-server.vercel.app/Assets/Images/categories/${category.imageUrl}`} alt="" />
                     </figure>
                     <p className="category-name">
                         {category.name}

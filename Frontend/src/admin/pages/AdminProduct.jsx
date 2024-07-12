@@ -56,7 +56,7 @@ const AdminProduct = () => {
                         <tr class="product-data" key={index}>
                             <td class="prod-data-sn">{index+1}</td>
                             <td class="prod-data-img"><img
-                                src={`../../../Assets/Images/Products/${product.frontView}`}
+                                src={`../https://digitalkirana-server.vercel.app/Assets/Images/Products/${product.frontView}`}
                                 alt="" /></td>
                             <td class="prod-data-name">{product.productName}</td>
                             <td class="prod-data-category">{product.category}</td>

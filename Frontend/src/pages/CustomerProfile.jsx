@@ -120,7 +120,7 @@ const CustomerProfile = () => {
                           <div className="item" key={productIndex}>
                             <div>
                               <img
-                                src={`../../Assets/Images/Products/${product.frontView}`}
+                                src={`https://digitalkirana-server.vercel.app/Assets/Images/Products/${product.frontView}`}
                                 className="item-image"
                                 alt={product.product.name}
                               />

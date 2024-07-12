@@ -55,7 +55,7 @@ const AdminCategory = () => {
                   <tr className="category-data">
                     <td className="cat-data-sn">{index + 1}</td>
                     <td className="cat-data-img"><img
-                      src={`../../../Assets/Images/categories/${category.imageUrl}`}
+                      src={`../https://digitalkirana-server.vercel.app/Assets/Images/categories/${category.imageUrl}`}
                       alt="" /></td>
                     <td className="cat-data-name">{category.name}</td>
                     <td className="cat-data-published">1</td>

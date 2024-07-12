@@ -66,7 +66,7 @@ const Cart = () => {
                                         <div className="cart-product-card" key={cartItem._id}>
                                             {/* {console.log(cartItem)} */}
                                             <div className="cart-product-img-container">
-                                                <img src={`../../Assets/Images/Products/${cartItem.frontView}`} alt="" />
+                                                <img src={`https://digitalkirana-server.vercel.app/Assets/Images/Products/${cartItem.frontView}`} alt="" />
                                             </div>
                                             <div className="cart-product-specification">
                                                 <h4 className="cart-product-name">{cartItem.productName} </h4>

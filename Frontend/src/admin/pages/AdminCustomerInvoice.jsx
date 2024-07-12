@@ -7,7 +7,7 @@ const AdminCustomerInvoice = () => {
         <h1>Invoice</h1>
         <section id="invoiceContent">
             <div class="invoice-heading">
-                <img src="../Assets/Images/Icons/logo_single.png" alt="Digital Kirana Logo" />
+                <img src="https://digitalkirana-server.vercel.app/Assets/Images/Icons/logo_single.png" alt="Digital Kirana Logo" />
                 <span>Order <span id="orderId">#123456</span></span>
             </div>
             <hr />

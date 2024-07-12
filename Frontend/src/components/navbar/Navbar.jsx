@@ -65,7 +65,7 @@ const Navbar = ({ data }) => {
           <div className="logo-container">
             <Link to="/">
               <img
-                src="../../../Assets/Images/Icons/logo-single_img.png"
+                src="../https://digitalkirana-server.vercel.app/Assets/Images/Icons/logo-single_img.png"
                 alt="Logo"
               />
             </Link>

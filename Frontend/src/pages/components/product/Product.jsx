@@ -28,7 +28,7 @@ const Product = ({data,change}) => {
     <div  className="product-card">
       <Link to={`/singlePage/${data._id}`}  onClick={handleData} >
         <figure className="product-img-container">
-          <img src= {`../../Assets/Images/Products/${data.frontView}`}
+          <img src= {`https://digitalkirana-server.vercel.app/Assets/Images/Products/${data.frontView}`}
             alt="" />
         </figure>
       </Link>

@@ -49,7 +49,7 @@ const Checkout = () => {
                                             {/* {console.log(cartItem)} */}
                                             <i className='bx bx-x prod-del-btn'></i>
                                             <figure className="order-item-image">
-                                                <img src={`../../Assets/Images/Products/${cartItem.frontView}`}
+                                                <img src={`https://digitalkirana-server.vercel.app/Assets/Images/Products/${cartItem.frontView}`}
                                                     alt="" />
                                             </figure>
                                             <div className="order-item-detail">

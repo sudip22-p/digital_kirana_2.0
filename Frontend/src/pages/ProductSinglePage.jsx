@@ -47,20 +47,20 @@ const ProductSinglePage = () => {
                             <figure className="detail-product-img-container">
                                 <div className="small-img-container">
                                     <div className="img1 mini-img focus">
-                                        <img src={`../../Assets/Images/Products/${frontView}`} alt="" />
+                                        <img src={`https://digitalkirana-server.vercel.app/Assets/Images/Products/${frontView}`} alt="" />
                                     </div>
                                     <div className="img2 mini-img">
-                                        <img src={`../../Assets/Images/Products/${backView}`} alt="" />
+                                        <img src={`https://digitalkirana-server.vercel.app/Assets/Images/Products/${backView}`} alt="" />
                                     </div>
                                     <div className="img3 mini-img">
-                                        <img src={`../../Assets/Images/Products/${sideView}`} alt="" />
+                                        <img src={`https://digitalkirana-server.vercel.app/Assets/Images/Products/${sideView}`} alt="" />
                                     </div>
                                     <div className="img3 mini-img">
-                                        <img src={`../../Assets/Images/Products/${topView}`} alt="" />
+                                        <img src={`https://digitalkirana-server.vercel.app/Assets/Images/Products/${topView}`} alt="" />
                                     </div>
                                 </div>
                                 <div className="main-img-container">
-                                    <img src={`../../Assets/Images/Products/${frontView}`}
+                                    <img src={`https://digitalkirana-server.vercel.app/Assets/Images/Products/${frontView}`}
                                         alt="" />
                                 </div>
 
