@@ -13,7 +13,7 @@ const Home = () => {
   const [product, setProduct] = useState([])
   const handleData = async () => {
     try {
-      const response = await axios.get('https://digitalkirana.vercel.app/api/homePage')
+      const response = await axios.get('https://digitalkirana-server.vercel.app/api/homePage')
       dispatch(setProducts(response.data.products))
       setProduct(response.data.products);
     } catch (error) {

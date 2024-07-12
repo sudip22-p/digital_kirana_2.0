@@ -32,7 +32,7 @@ export const login = data => {
     return async function loginChunk(dispatch){
         dispatch(setStatus(STATUS.LOADING))
         try{
-            const response = await axios.post('https://digitalkirana.vercel.app/auth/login',data)
+            const response = await axios.post('https://digitalkirana-server.vercel.app/auth/login',data)
             if(response.status === 200 && response.data.userToken){
                 dispatch(setStatus(STATUS.SUCCESS))
                 dispatch(setToken(response.data.userToken))
@@ -52,7 +52,7 @@ export const register = data =>{
     return async function registerChunk(dispatch){
         dispatch(setStatus(STATUS.LOADING))
         try {
-            const response = await axios.post('https://digitalkirana.vercel.app/auth/register', data);
+            const response = await axios.post('https://digitalkirana-server.vercel.app/auth/register', data);
             console.log("Received response from backend", response);
         
             if (response.status === 200 && response.data.userToken) {
@@ -79,7 +79,7 @@ export const register = data =>{
 
 export const handleSuccessLogin = (data) => {
     return async (dispatch) => {
-        const response = await axios.get('https://digitalkirana.vercel.app/auth/login/success', {
+        const response = await axios.get('https://digitalkirana-server.vercel.app/auth/login/success', {
             params: data,
         });
         try{
@@ -110,6 +110,6 @@ export const getLogoutGoogle =  () => {
         dispatch(setToken(null))
         localStorage.removeItem('user')
         Cookies.remove("googleToken", "connect.sid")
-        window.open("https://digitalkirana.vercel.app/auth/google/logout", "_self")
+        window.open("https://digitalkirana-server.vercel.app/auth/google/logout", "_self")
     }
 }

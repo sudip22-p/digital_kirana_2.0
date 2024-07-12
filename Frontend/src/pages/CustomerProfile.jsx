@@ -18,7 +18,7 @@ const CustomerProfile = () => {
   const getUserData = async (_id) => {
     try {
       const response = await axios.get(
-        `https://digitalkirana.vercel.app/admin/dashboard/userData/${_id}`
+        `https://digitalkirana-server.vercel.app/admin/dashboard/userData/${_id}`
       );
       setUserInfo(response.data);
     } catch (error) {
@@ -38,7 +38,7 @@ const CustomerProfile = () => {
 
   const handleAPI = async () => {
     const response = await axios.get(
-      "https://digitalkirana.vercel.app/admin/dashboard/allOrders"
+      "https://digitalkirana-server.vercel.app/admin/dashboard/allOrders"
     );
     setOrders([...response.data.allOrders].reverse());
   };

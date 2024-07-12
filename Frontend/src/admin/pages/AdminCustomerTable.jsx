@@ -8,7 +8,7 @@ const AdminCustomerTable = () => {
     const [localCustomers, setLocalCustomers] = useState([])
     const [googleCustomers, setGoogleCustomers] = useState([])
     const handleAPI = async () => {
-        const response = await axios.get('https://digitalkirana.vercel.app/admin/dashboard/allCustomers')
+        const response = await axios.get('https://digitalkirana-server.vercel.app/admin/dashboard/allCustomers')
         setLocalCustomers(response.data.allLocalCustomers)
         setGoogleCustomers(response.data.allGoogleCustomers)
     }

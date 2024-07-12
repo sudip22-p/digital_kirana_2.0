@@ -7,7 +7,7 @@ const VerifyUser = () => {
     const navigate = useNavigate()
     const [status,setStatus] = useState('')
     const verifyUser = async () =>{
-        const response = await axios.post(`https://digitalkirana.vercel.app/auth/verify-user/${id}`,id)
+        const response = await axios.post(`https://digitalkirana-server.vercel.app/auth/verify-user/${id}`,id)
         console.log(response.data)
         // setStatus(response.data.status)
     }

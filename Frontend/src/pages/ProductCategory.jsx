@@ -11,7 +11,7 @@ const ProductCategory = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const handleAPI = async () => {
-      const response = await axios.get(`https://digitalkirana.vercel.app/api/productCategory/${id}`)
+      const response = await axios.get(`https://digitalkirana-server.vercel.app/api/productCategory/${id}`)
       setProducts(response.data.categoryProducts);
     }
     handleAPI()

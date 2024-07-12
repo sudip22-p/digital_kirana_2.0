@@ -18,7 +18,7 @@ export default productSlice.reducer
 export const handleProduct = data =>{
     return async function apiChunk(dispatch){
         try{
-            const response = await axios.get('https://digitalkirana.vercel.app/api/homePage')
+            const response = await axios.get('https://digitalkirana-server.vercel.app/api/homePage')
             console.log('working')
             if(response.status === 200){
                 console.log(response.data)

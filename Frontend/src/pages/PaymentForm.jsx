@@ -19,7 +19,7 @@ const PaymentForm = ({ address, cartData, authData }) => {
   }
   const handlePayment = async (payment_method) => {
     console.log('esewa')
-    const url = "https://digitalkirana.vercel.app/api/create";
+    const url = "https://digitalkirana-server.vercel.app/api/create";
     const data = {
       amount: cartData.cartTotalAmount,
       products: generateCartItems(cart),

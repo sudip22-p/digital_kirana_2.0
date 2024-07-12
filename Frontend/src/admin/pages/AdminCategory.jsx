@@ -8,7 +8,7 @@ const AdminCategory = () => {
   const [categories, setCategories] = useState([])
   
   const handleAPI = async () => {
-    const response = await axios.get('https://digitalkirana.vercel.app/admin/dashboard/allCategories')
+    const response = await axios.get('https://digitalkirana-server.vercel.app/admin/dashboard/allCategories')
     console.log(response.data)
     setCategories(response.data.allCategories)
   }
