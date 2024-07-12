@@ -19,7 +19,8 @@ require("./controller/auth/passport")(passport)
 const app = express();
 
 app.use(cors({
-    origin : "http://localhost:5173",
+    // origin : "http://localhost:5173",
+    origin : "https://digitalkirana-zeta.vercel.app",
     methods:"GET,POST,PUT,DELETE",
     credentials:true,
 }))
