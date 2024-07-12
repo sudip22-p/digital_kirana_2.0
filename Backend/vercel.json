@@ -9,7 +9,7 @@
     "redirects": [
       {
         "source": "/(.*)",
-        "destination": "https://digital-kirana-liard.vercel.app/$1",
+        "destination": "https://digital-kirana-gules.vercel.app/$1",
         "permanent": true
       }
     ]
