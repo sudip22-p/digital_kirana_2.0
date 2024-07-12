@@ -90,9 +90,10 @@ app.use("/auth",authRoutes);
 app.use("/api",pageRoutes);
 app.use("/admin",adminRoutes)
 
+const port=process.env.PORT || 3000;
 mongoose.connect(process.env.MONGO_URI).then((result) => {
     console.log("Connected To DataBase")
-    app.listen(3000,()=>{
-        console.log('Server running on http://localhost:3000')
+    app.listen(port,()=>{
+        console.log(`Server running on http://localhost:${port}`)
     })
 })
