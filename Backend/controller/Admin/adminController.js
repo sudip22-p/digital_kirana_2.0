@@ -149,20 +149,44 @@ exports.getAllCategories = async(req,res) => {
     })
   }
 }
-//works
-exports.getAllOrders = async(req,res) => {
+//for customer profile
+exports.getAllOrders = async (req, res) => {
   try {
-    const allOrders = await Order.find({})
+    const allOrders = await Order.find({}).populate('products.product');
     res.status(200).json({
-      allOrders
-    })
-    } catch (error) {
+      allOrders,
+    });
+  } catch (error) {
     console.log(error);
     res.status(500).json({
-      message:"DB Error"
-    })
+      message: "DB Error",
+    });
   }
-}
+};
+
+//for customer data
+exports.getUserData = async (req, res) => {
+  try {
+    //find customer by id
+    const { _id } = req.params;
+    const customer = await Customer.findById(_id);
+
+      if (!customer) {
+          return res.status(404).json({ message: 'Customer not found' });
+      }
+      let responseData={
+        userName:customer.userName,
+        fullName:customer.fullName,
+        email:customer.email,
+        phoneNumber:customer.phoneNumber,
+      }
+      res.json(responseData);
+  } catch (error) {
+      res.status(500).json({ message: 'Server error', error: error.message });
+  }
+};
+
+
 //works
 exports.postAddCategory = async (req, res) => {
   if (!req.admin) {

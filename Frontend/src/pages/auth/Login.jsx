@@ -17,8 +17,8 @@ const Login = () => {
     //}
   
     const dispatch = useDispatch()
-    const handleLogin = (data) => {
-        dispatch(login(data))
+    const handleLogin = async(data) => {
+        await dispatch(login(data))
         dispatch(handleSuccessLogin(data))
     }
   

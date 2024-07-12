@@ -52,3 +52,9 @@ router.route("/dashboard/allOrders")
 router.route("/dashboard/add-category")
   .post(adminMiddleware,AdminControllers.postAddCategory);
 module.exports = router;
+
+// @desc getUserData
+// @route GET /admin/dashboard/userData
+router.route("/dashboard/userData/:_id")
+  .get(AdminControllers.getUserData);
+module.exports = router;
