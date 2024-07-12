@@ -146,7 +146,7 @@ exports.createOrder = async (req, res) => {
         product_code: "EPAYTEST",
         signature: signature,
         signed_field_names: "total_amount,transaction_uuid,product_code",
-        success_url: "http://localhost:3000/api/esewa-success",
+        success_url: "https://digitalkirana-server.vercel.app/api/esewa-success",
         tax_amount: "0",
         total_amount: order.amount,
         transaction_uuid: order._id,

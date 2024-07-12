@@ -57,7 +57,7 @@ exports.registerCustomer = async(req,res) => {
         const verificationToken = jwt.sign({ userId }, process.env.USER_SECRET_KEY, { expiresIn: '1h' });
         costumer.verificationToken=verificationToken;
         await costumer.save();
-        const verificationLink = `http://localhost:5173/verify-user/${verificationToken}`;
+        const verificationLink = `https://digital-kirana-gules.vercel.app/verify-user/${verificationToken}`;
         
         const emailSubject = 'Digital Kirana : User Verification';
         const emailBody = `
@@ -191,7 +191,7 @@ exports.passwordReset = async(req,res) => {
         }
         const resetToken = jwt.sign({ userId: user._id }, process.env.USER_SECRET_KEY, { expiresIn: '1h' });
     
-        const resetLink = `http://localhost:5173/reset-password?token=${resetToken}`;
+        const resetLink = `https://digital-kirana-gules.vercel.app/reset-password?token=${resetToken}`;
 
         const tokenExpiration = new Date(Date.now() + 60 * 60 * 1000); 
 

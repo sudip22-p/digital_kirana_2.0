@@ -5,7 +5,7 @@ const passport = require("passport");
 const AuthControllers = require('../controller/auth/authController')
 const Costumer = require('../model/userModel');
 
-const CLIENT_URL = "http://localhost:5173/"
+const CLIENT_URL = "https://digital-kirana-gules.vercel.app/"
 
 // @ desc Register Costumer
 // @ route POST /auth/register
