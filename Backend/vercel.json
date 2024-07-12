@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/app.js"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "destination": "https://digital-kirana-liard.vercel.app/$1",
+        "permanent": true
+      }
+    ]
+  }
