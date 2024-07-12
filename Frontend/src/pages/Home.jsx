@@ -30,7 +30,7 @@ const Home = () => {
         <main>
           <section id="promotionalImageContainer">
             <div className="main-img-banner">
-              <img src={`../../Assets/Images/promotion/deliver banner.png`} alt="" />
+              <img src={`../../Assets/Images/promotion/deliver%20banner.png`} alt="" />
             </div>
             <div className="secondary-img-banner">
               <img src={`../../Assets/Images/promotion/advertisement-banner.png`} alt="" />
