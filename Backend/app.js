@@ -20,8 +20,8 @@ const app = express();
 
 app.use(cors({
     // origin : "http://localhost:5173",
-    origin: "https://digital-kirana-liard.vercel.app/",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: 'https://digital-kirana-liard.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }))
 // Configure express-session
