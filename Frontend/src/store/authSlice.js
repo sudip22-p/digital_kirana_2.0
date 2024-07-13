@@ -114,6 +114,12 @@ export const getLogoutGoogle =  () => {
         // Cookies.remove("googleToken", "connect.sid")
         Cookies.remove("googleToken")
         Cookies.remove("connect.sid")
+        Cookies.remove('googleToken', { path: '/' });
+        Cookies.remove('connect.sid', { path: '/' });
+        Cookies.remove('googleToken', { path: '/login' });
+        Cookies.remove('connect.sid', { path: '/login' });
+        Cookies.remove('googleToken', { path: '/register' });
+        Cookies.remove('connect.sid', { path: '/register' });
         console.log("Logout")
         window.open("https://digitalkirana-server.vercel.app/auth/google/logout", "_self")
     }
