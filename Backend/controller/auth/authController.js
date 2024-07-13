@@ -388,6 +388,8 @@ exports.getLogoutGoogle = async (req, res, next) => {
             if (err) { 
                 return next(err); 
             }
+            res.clearCookie('connect.sid');
+            res.clearCookie('userToken');
             res.redirect('https://digital-kirana-gules.vercel.app');
         });
     } catch (error) {

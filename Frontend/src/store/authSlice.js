@@ -12,50 +12,50 @@ const authSlice = createSlice({
         status: null,
     },
     reducers: {
-        setStatus(state, action){
+        setStatus(state, action) {
             state.status = action.payload
         },
-        setToken(state,action){
+        setToken(state, action) {
             state.token = action.payload
         },
-        setUser(state,action){
+        setUser(state, action) {
             state.user = action.payload
         }
     }
 })
 
-export const {setStatus, setToken, setUser} = authSlice.actions
+export const { setStatus, setToken, setUser } = authSlice.actions
 export default authSlice.reducer
 
 export const login = data => {
 
-    return async function loginChunk(dispatch){
+    return async function loginChunk(dispatch) {
         dispatch(setStatus(STATUS.LOADING))
-        try{
-            const response = await axios.post('https://digitalkirana-server.vercel.app/auth/login',data)
-            if(response.status === 200 && response.data.userToken){
+        try {
+            const response = await axios.post('https://digitalkirana-server.vercel.app/auth/login', data)
+            if (response.status === 200 && response.data.userToken) {
                 dispatch(setStatus(STATUS.SUCCESS))
                 dispatch(setToken(response.data.userToken))
                 data._id = response.data.customerId;
                 dispatch(setUser(data))
-            }else{
+            } else {
                 toast.error("Something Went Wrong!!")
                 dispatch(setStatus(STATUS.ERROR))
             }
-        }catch(error){
+        } catch (error) {
             dispatch(setStatus(STATUS.ERROR))
         }
     }
 }
 
-export const register = data =>{
-    return async function registerChunk(dispatch){
+export const register = data => {
+    return async function registerChunk(dispatch) {
         dispatch(setStatus(STATUS.LOADING))
         try {
             const response = await axios.post('https://digitalkirana-server.vercel.app/auth/register', data);
-            console.log("ttt"+data)
+            console.log("ttt" + data)
             console.log("Received response from backend", response);
-        
+
             if (response.status === 200 && response.data.userToken) {
                 console.log("Registration successful");
                 dispatch(setStatus(STATUS.SUCCESS));
@@ -74,7 +74,7 @@ export const register = data =>{
             toast.error(error.response.data.errorMessage);
             dispatch(setStatus(STATUS.ERROR));
         }
-        
+
     }
 }
 
@@ -83,7 +83,7 @@ export const handleSuccessLogin = (data) => {
         const response = await axios.get('https://digitalkirana-server.vercel.app/auth/login/success', {
             params: data,
         });
-        try{
+        try {
             if (response.status === 200) {
                 dispatch(setStatus(STATUS.SUCCESS))
                 console.log(response.data)
@@ -91,20 +91,20 @@ export const handleSuccessLogin = (data) => {
                 dispatch(setToken(response.data.googleToken))
                 // const {userName,email} = response.data.user;
                 // localStorage.setItem('user', JSON.stringify({userName,email}));
-                const {email,_id} = response.data.user;
-                localStorage.setItem('user', JSON.stringify({email,_id}));
+                const { email, _id } = response.data.user;
+                localStorage.setItem('user', JSON.stringify({ email, _id }));
                 Cookies.set("googleToken", response.data.googleToken)
                 location.href = 'https://digital-kirana-gules.vercel.app/'
-            } else{
+            } else {
                 dispatch(setStatus(STATUS.ERROR))
             }
-        }catch(error){
+        } catch (error) {
             dispatch(setStatus(STATUS.ERROR))
         }
     }
 }
 
-export const getLogoutGoogle =  () => {
+export const getLogoutGoogle = () => {
     console.log("Logoutgggg")
     return async (dispatch) => {
         dispatch(setStatus(null))
@@ -112,14 +112,9 @@ export const getLogoutGoogle =  () => {
         dispatch(setToken(null))
         localStorage.removeItem('user')
         // Cookies.remove("googleToken", "connect.sid")
-        Cookies.remove("googleToken")
-        Cookies.remove("connect.sid")
         Cookies.remove('googleToken', { path: '/' });
         Cookies.remove('connect.sid', { path: '/' });
-        Cookies.remove('googleToken', { path: '/login' });
-        Cookies.remove('connect.sid', { path: '/login' });
-        Cookies.remove('googleToken', { path: '/register' });
-        Cookies.remove('connect.sid', { path: '/register' });
+
         console.log("Logout")
         window.open("https://digitalkirana-server.vercel.app/auth/google/logout", "_self")
     }
