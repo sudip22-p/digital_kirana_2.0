@@ -53,6 +53,7 @@ export const register = data =>{
         dispatch(setStatus(STATUS.LOADING))
         try {
             const response = await axios.post('https://digitalkirana-server.vercel.app/auth/register', data);
+            console.log("ttt"+data)
             console.log("Received response from backend", response);
         
             if (response.status === 200 && response.data.userToken) {
@@ -60,7 +61,7 @@ export const register = data =>{
                 dispatch(setStatus(STATUS.SUCCESS));
                 dispatch(setUser(data));
                 dispatch(setToken(response.data.userToken));
-        
+                console.log(data)
                 const { username, email, _id, phoneNumber } = data;
                 localStorage.setItem('user', JSON.stringify({ username, email, _id, phoneNumber }));
                 Cookies.set('userToken', response.data.userToken, { expires: 7 });

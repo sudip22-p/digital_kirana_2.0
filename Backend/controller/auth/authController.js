@@ -111,7 +111,7 @@ exports.registerCustomer = async(req,res) => {
                 <p><a href="${verificationLink}" class="link">Verify Your Account</a></p>
             </div>
             <div class="footer">
-                <p>Do not reply to this email. Visit our website <a href="http://localhost:5173">Digital Kirana</a> for more information.</p>
+                <p>Do not reply to this email. Visit our website <a href="https://digital-kirana-gules.vercel.app">Digital Kirana</a> for more information.</p>
             </div>
         </div>
         </body>
@@ -254,7 +254,7 @@ exports.passwordReset = async(req,res) => {
                     </div>
                 </div>
                 <div class="footer">
-                    <p>Do not reply to this email. Visit our website <a href="http://localhost:3000">Digital Kirana</a> for more information.</p>
+                    <p>Do not reply to this email. Visit our website <a href="https://digital-kirana-gules.vercel.app">Digital Kirana</a> for more information.</p>
                 </div>
             </div>
         </body>
