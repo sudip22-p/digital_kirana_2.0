@@ -382,14 +382,16 @@ exports.getSuccessLogin = async(req,res) => {
     }
     
 }
-
-exports.getLogoutGoogle = async(req,res) => {
+exports.getLogoutGoogle = async (req, res, next) => {
     try {
         req.logout(function (err) {
-            if (err) { return next(err); }
-            res.redirect('http://localhost:5173');
+            if (err) { 
+                return next(err); 
+            }
+            res.redirect('https://digital-kirana-gules.vercel.app');
         });
     } catch (error) {
-       console.log(error) 
+        console.error(error);
+        res.status(500).send('An error occurred during logout');
     }
 }
