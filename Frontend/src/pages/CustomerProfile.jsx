@@ -9,12 +9,6 @@ const CustomerProfile = () => {
   const googleToken = Cookies.get("googleToken");
   const [userInfo, setUserInfo] = useState([]);
   const auth = useSelector((state) => state.auth);
-  let _id;
-  if (googleToken) {
-    _id = auth.user._id;
-  } else {
-    _id = auth.user._id;
-  }
   const email=auth.user.email;
   const getUserData = async (email) => {
     try {
