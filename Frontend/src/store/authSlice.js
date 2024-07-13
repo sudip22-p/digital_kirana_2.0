@@ -111,7 +111,9 @@ export const getLogoutGoogle =  () => {
         dispatch(setUser(null))
         dispatch(setToken(null))
         localStorage.removeItem('user')
-        Cookies.remove("googleToken", "connect.sid")
+        // Cookies.remove("googleToken", "connect.sid")
+        Cookies.remove("googleToken")
+        Cookies.remove("connect.sid")
         console.log("Logout")
         window.open("https://digitalkirana-server.vercel.app/auth/google/logout", "_self")
     }
