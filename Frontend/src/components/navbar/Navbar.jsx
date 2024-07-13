@@ -26,7 +26,9 @@ const Navbar = ({ data }) => {
     setIsDrop(!isDrop);
   };
 
-  const handleLogout = () => {};
+  const handleLogout = () => {
+    dispatch(getLogoutGoogle());
+  };
 
   const facebookUser = false;
   const { cartTotalQuantity } = useSelector((state) => state.cart);

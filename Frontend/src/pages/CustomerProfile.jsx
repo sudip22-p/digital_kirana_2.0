@@ -38,9 +38,10 @@ const CustomerProfile = () => {
 
   const handleAPI = async () => {
     const response = await axios.get(
-      "https://digitalkirana-server.vercel.app/admin/dashboard/allOrders"
+      `https://digitalkirana-server.vercel.app/admin/dashboard/allOrders/${_id}`
     );
     setOrders([...response.data.allOrders].reverse());
+    console.log(response.data.allOrders);
   };
 
   useEffect(() => {

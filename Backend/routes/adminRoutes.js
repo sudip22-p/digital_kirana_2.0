@@ -44,7 +44,7 @@ router.route("/dashboard/allCategories")
 
 // @desc getAllProducts
 // @route GET /admin/dashboard/allOrders
-router.route("/dashboard/allOrders")
+router.route("/dashboard/allOrders/:_id")
   .get(AdminControllers.getAllOrders);
 
 // @desc postAddCategory

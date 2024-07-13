@@ -152,6 +152,11 @@ exports.getAllCategories = async(req,res) => {
 //for customer profile
 exports.getAllOrders = async (req, res) => {
   try {
+
+    //find customer by id
+    const { _id } = req.params;
+    // const customer = await Customer.findById(_id);
+
     const allOrders = await Order.find({}).populate('products.product');
     res.status(200).json({
       allOrders,
