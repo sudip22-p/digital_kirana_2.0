@@ -15,6 +15,7 @@ const CustomerProfile = () => {
   } else {
     _id = auth.user._id;
   }
+  console.log("iiiiddd:"+_id);
   const getUserData = async (_id) => {
     try {
       const response = await axios.get(
