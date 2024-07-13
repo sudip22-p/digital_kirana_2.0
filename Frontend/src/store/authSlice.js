@@ -105,12 +105,14 @@ export const handleSuccessLogin = (data) => {
 }
 
 export const getLogoutGoogle =  () => {
+    console.log("Logoutgggg")
     return async (dispatch) => {
         dispatch(setStatus(null))
         dispatch(setUser(null))
         dispatch(setToken(null))
         localStorage.removeItem('user')
         Cookies.remove("googleToken", "connect.sid")
+        console.log("Logout")
         window.open("https://digitalkirana-server.vercel.app/auth/google/logout", "_self")
     }
 }
