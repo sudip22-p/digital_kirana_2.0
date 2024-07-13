@@ -15,11 +15,11 @@ const CustomerProfile = () => {
   } else {
     _id = auth.user._id;
   }
-  console.log("iiiiddd:"+_id);
-  const getUserData = async (_id) => {
+  const email=auth.user.email;
+  const getUserData = async (email) => {
     try {
       const response = await axios.get(
-        `https://digitalkirana-server.vercel.app/admin/dashboard/userData/${_id}`
+        `https://digitalkirana-server.vercel.app/admin/dashboard/userData/${email}`
       );
       setUserInfo(response.data);
     } catch (error) {
@@ -34,12 +34,12 @@ const CustomerProfile = () => {
     }
   };
   //getting user data:
-  getUserData(_id);
+  getUserData(email);
   const [allOrders, setOrders] = useState([]);
 
   const handleAPI = async () => {
     const response = await axios.get(
-      `https://digitalkirana-server.vercel.app/admin/dashboard/allOrders/${_id}`
+      `https://digitalkirana-server.vercel.app/admin/dashboard/allOrders/${email}`
     );
     setOrders([...response.data.allOrders].reverse());
     console.log(response.data.allOrders);

@@ -44,7 +44,7 @@ router.route("/dashboard/allCategories")
 
 // @desc getAllProducts
 // @route GET /admin/dashboard/allOrders
-router.route("/dashboard/allOrders/:_id")
+router.route("/dashboard/allOrders/:email")
   .get(AdminControllers.getAllOrders);
 
 // @desc postAddCategory
@@ -55,6 +55,6 @@ module.exports = router;
 
 // @desc getUserData
 // @route GET /admin/dashboard/userData
-router.route("/dashboard/userData/:_id")
+router.route("/dashboard/userData/:email")
   .get(AdminControllers.getUserData);
 module.exports = router;

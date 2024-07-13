@@ -153,11 +153,8 @@ exports.getAllCategories = async(req,res) => {
 exports.getAllOrders = async (req, res) => {
   try {
 
-    //find customer by id
-    const { _id } = req.params;
-    // const customer = await Customer.findById(_id);
-
-    const allOrders = await Order.find({}).populate('products.product');
+    const { email } = req.params;
+    const allOrders = await Order.find({ customerEmail: email }).populate('products.product');
     res.status(200).json({
       allOrders,
     });
@@ -172,9 +169,9 @@ exports.getAllOrders = async (req, res) => {
 //for customer data
 exports.getUserData = async (req, res) => {
   try {
-    //find customer by id
-    const { _id } = req.params;
-    const customer = await Customer.findById(_id);
+    //find customer by email
+    const { email } = req.params;
+    const customer=await Customer.findOne({email:email});
 
       if (!customer) {
           return res.status(404).json({ message: 'Customer not found' });
