@@ -9,7 +9,7 @@ const CustomerProfile = () => {
   const googleToken = Cookies.get("googleToken");
   const [userInfo, setUserInfo] = useState([]);
   const auth = useSelector((state) => state.auth);
-  const email=auth.user.email;
+  const email = auth.user.email;
   const getUserData = async (email) => {
     try {
       const response = await axios.get(
@@ -62,7 +62,7 @@ const CustomerProfile = () => {
                   </div>
                 </section>
                 <section className="customer-right-container">
-                <div className="customer-detail">
+                  <div className="customer-detail">
                     <span className="label">Email: </span>
                     <span className="value">{userInfo.email}</span>
                   </div>
@@ -97,10 +97,8 @@ const CustomerProfile = () => {
                           </span>
                         </p>
                         <p>
-                            Delivery Address: &nbsp;
-                        <span>
-                            {order.address}
-                          </span>
+                          Delivery Address: &nbsp;
+                          <span>{order.address}</span>
                         </p>
                       </div>
                       <span

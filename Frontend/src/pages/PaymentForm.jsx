@@ -2,23 +2,22 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import axios from "axios";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const PaymentForm = ({ address, cartData, authData }) => {
   const cart = cartData.cartItems;
 
-  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const generateCartItems = (carts) => {
     return carts.map((cart) => ({
-      product:cart._id,
-      quantity:cart.cartQuantity,
-      frontView:cart.frontView,
+      product: cart._id,
+      quantity: cart.cartQuantity,
+      frontView: cart.frontView,
     }));
-  }
+  };
   const handlePayment = async (payment_method) => {
-    console.log('esewa')
+    console.log("esewa");
     const url = "https://digitalkirana-server.vercel.app/api/create";
     const data = {
       amount: cartData.cartTotalAmount,
@@ -73,8 +72,8 @@ const PaymentForm = ({ address, cartData, authData }) => {
     document.body.appendChild(form);
     form.submit();
     const clearCartItem = () => {
-        dispatch()
-    }
+      dispatch();
+    };
   };
 
   return (
@@ -84,7 +83,14 @@ const PaymentForm = ({ address, cartData, authData }) => {
         <p>Loading...</p>
       ) : (
         <button
-          style={{ padding: "16px 16px", backgroundColor: "white", color: "black", borderRadius: "12px", cursor:"pointer", border:"1px solid green"}}
+          style={{
+            padding: "16px 16px",
+            backgroundColor: "white",
+            color: "black",
+            borderRadius: "12px",
+            cursor: "pointer",
+            border: "1px solid green",
+          }}
           onClick={() => handlePayment("esewa")}
         >
           Pay Through Esewa
@@ -92,6 +98,6 @@ const PaymentForm = ({ address, cartData, authData }) => {
       )}
     </div>
   );
-}
+};
 
 export default PaymentForm;
